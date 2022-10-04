@@ -22,7 +22,7 @@ function loadEnv(){
   sh ~/.bashrc
 }
 
-echo "Verify java version"
-java -version
+#echo "Verify java version"
+#java -version
 
 
