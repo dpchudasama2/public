@@ -12,8 +12,8 @@ tar -xvf openjdk-13.0.1_linux-x64_bin.tar.gz
 mv jdk-13.0.1 /opt/
 
 echo "Setting JDK Env."
-sudo echo 'JAVA_HOME="/opt/jdk-13.0.1"' >> ~/.bashrc
-sudo echo 'export PATH="$PATH:$JAVA_HOME/bin"' >> ~/.bashrc
+echo 'JAVA_HOME="/opt/jdk-13.0.1"' >> ~/.bashrc
+echo 'export PATH="$PATH:$JAVA_HOME/bin"' >> ~/.bashrc
 
 . ~/.bashrc
 
