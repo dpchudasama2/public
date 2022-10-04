@@ -15,7 +15,7 @@ echo "Setting JDK Env."
 echo 'JAVA_HOME="/opt/jdk-13.0.1"' >> ~/.bashrc
 echo 'export PATH="$PATH:$JAVA_HOME/bin"' >> ~/.bashrc
 
-. ~/.bashrc
+sh ~/.bashrc
 
 echo "Verify java version"
 java -version
