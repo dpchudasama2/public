@@ -35,6 +35,7 @@ else
 fi
 echo '=============================='
 
-bash ~/.bashrc
+echo "Please restart terminal, or execute 'bash ~/.bashrc'"
 read -p "Press enter to continue"
-exit
+
+# bash ~/.bashrc
