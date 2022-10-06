@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # download and run:
 # wget https://raw.githubusercontent.com/dpchudasama2/public/main/script.sh
@@ -35,7 +35,6 @@ else
 fi
 echo '=============================='
 
-#echo "Verify java version"
-#java -version
-
-
+bash ~/.bashrc
+read -p "Press enter to continue"
+exit
