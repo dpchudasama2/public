@@ -36,4 +36,4 @@ echo '=============================='
 echo "Please restart terminal, or execute '. ~/.bashrc'"
 read -p "Press enter to continue"
 
-# . ~/.bashrc
+. ~/.bashrc
