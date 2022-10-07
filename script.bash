@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # download and run:
-# sudo curl -s https://raw.githubusercontent.com/dpchudasama2/public/main/script.bash | bash
+# curl -s https://raw.githubusercontent.com/dpchudasama2/public/main/script.bash | sudo bash
 
 if which java > /dev/null 2>&1; then
     echo "Java already installed"
@@ -10,7 +10,7 @@ else
     echo "Downloading and Installing JDK..."
     wget https://download.java.net/java/GA/jdk13.0.1/cec27d702aa74d5a8630c65ae61e4305/9/GPL/openjdk-13.0.1_linux-x64_bin.tar.gz
     tar -xvf openjdk-13.0.1_linux-x64_bin.tar.gz
-    sudo mv jdk-13.0.1 /opt/
+    mv jdk-13.0.1 /opt/
 
     echo "Setting JDK Env."
     echo 'JAVA_HOME="/opt/jdk-13.0.1"' >> ~/.bashrc
@@ -25,7 +25,7 @@ else
     echo "Downloading and Installing Maven..."
     wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
     tar -xvf apache-maven-3.6.3-bin.tar.gz
-    sudo mv apache-maven-3.6.3 /opt/
+    mv apache-maven-3.6.3 /opt/
 
     echo "Setting Maven Env."
     echo 'M2_HOME="/opt/apache-maven-3.6.3"' >> ~/.bashrc
