@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # download and run:
-# wget https://raw.githubusercontent.com/dpchudasama2/public/main/script.sh
-# sudo chmod +777 script.sh
-# sudo sh ./script.sh
+# sudo curl -s https://raw.githubusercontent.com/dpchudasama2/public/main/script.bash | bash
 
 if which java > /dev/null 2>&1; then
     echo "Java already installed"
@@ -35,7 +33,7 @@ else
 fi
 echo '=============================='
 
-echo "Please restart terminal, or execute 'bash ~/.bashrc'"
+echo "Please restart terminal, or execute '. ~/.bashrc'"
 read -p "Press enter to continue"
 
-# bash ~/.bashrc
+# . ~/.bashrc
