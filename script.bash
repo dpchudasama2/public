@@ -33,6 +33,30 @@ else
 fi
 echo '=============================='
 
+install_kafka(){
+    wget https://downloads.apache.org/kafka/3.3.1/kafka_2.13-3.3.1.tgz
+    tar -xvf kafka_2.13-3.3.1.tgz
+    mv kafka_2.13-3.3.1 /opt/
+    
+    KAFKA_HOME="/opt/kafka_2.13-3.3.1"
+    
+    echo "Setting Kafka Env."
+    echo 'KAFKA_HOME="/opt/kafka_2.13-3.3.1"' >> ~/.bashrc
+    echo 'export PATH="$PATH:$KAFKA_HOME/bin"' >> ~/.bashrc
+
+    echo "Creating data dirs"
+    mkdir -p "$KAFKA_HOME/data/zookeeper"
+    mkdir -p "$KAFKA_HOME/data/kafka"
+    
+    echo "Manual operation once"
+    echo 'do override "dataDir=$KAFKA_HOME/data/zookeeper" in $KAFKA_HOME/config/zookeeper.properties'
+    echo 'do override "log.dirs=$KAFKA_HOME/data/kafka" in $KAFKA_HOME/config/server.properties'
+
+    echo "Restart and execute following commands for run (every time)"
+    echo '[nohup] zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties [&]'
+    echo '[nohup] kafka-server-start.sh $KAFKA_HOME/config/server.properties [&]'
+}
+
 echo "Please restart terminal, or execute '. ~/.bashrc'"
 read -p "Press enter to continue"
 
